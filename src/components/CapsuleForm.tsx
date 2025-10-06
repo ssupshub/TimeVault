@@ -10,7 +10,10 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
   const [file, setFile] = useState<File | null>(null);
   const [deliveryMethod, setDeliveryMethod] = useState<'email' | 'sms'>('email');
   const [deliveryTarget, setDeliveryTarget] = useState('');
+  const [usePreset, setUsePreset] = useState(true);
   const [unlockPeriod, setUnlockPeriod] = useState('1');
+  const [customDate, setCustomDate] = useState('');
+  const [customTime, setCustomTime] = useState('12:00');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -20,10 +23,21 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
     }
   };
 
-  const calculateUnlockDate = (years: string): Date => {
-    const date = new Date();
-    date.setFullYear(date.getFullYear() + parseInt(years));
-    return date;
+  const calculateUnlockDate = (): Date => {
+    if (usePreset) {
+      const date = new Date();
+      date.setFullYear(date.getFullYear() + parseInt(unlockPeriod));
+      return date;
+    } else {
+      const dateTimeString = `${customDate}T${customTime}`;
+      return new Date(dateTimeString);
+    }
+  };
+
+  const getMinDate = () => {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return tomorrow.toISOString().split('T')[0];
   };
 
   const getFileType = (file: File): string => {
@@ -58,7 +72,15 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
         fileType = getFileType(file);
       }
 
-      const unlockDate = calculateUnlockDate(unlockPeriod);
+      if (!usePreset && !customDate) {
+        throw new Error('Please select a custom unlock date');
+      }
+
+      const unlockDate = calculateUnlockDate();
+
+      if (unlockDate <= new Date()) {
+        throw new Error('Unlock date must be in the future');
+      }
 
       const { data, error: insertError } = await supabase
         .from('time_capsules')
@@ -116,17 +138,65 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="unlock-period">Unlock In</label>
-          <select
-            id="unlock-period"
-            value={unlockPeriod}
-            onChange={(e) => setUnlockPeriod(e.target.value)}
-          >
-            <option value="1">1 Year</option>
-            <option value="5">5 Years</option>
-            <option value="10">10 Years</option>
-          </select>
+          <label>Choose Your Unlock Time</label>
+          <div className="radio-group">
+            <label className="radio-label">
+              <input
+                type="radio"
+                checked={usePreset}
+                onChange={() => setUsePreset(true)}
+              />
+              <span>Quick Select</span>
+            </label>
+            <label className="radio-label">
+              <input
+                type="radio"
+                checked={!usePreset}
+                onChange={() => setUsePreset(false)}
+              />
+              <span>Custom Date & Time</span>
+            </label>
+          </div>
         </div>
+
+        {usePreset ? (
+          <div className="form-group">
+            <label htmlFor="unlock-period">Select Time Period</label>
+            <select
+              id="unlock-period"
+              value={unlockPeriod}
+              onChange={(e) => setUnlockPeriod(e.target.value)}
+            >
+              <option value="1">1 Year from now</option>
+              <option value="5">5 Years from now</option>
+              <option value="10">10 Years from now</option>
+            </select>
+          </div>
+        ) : (
+          <div className="custom-datetime-group">
+            <div className="form-group">
+              <label htmlFor="custom-date">Select Unlock Date</label>
+              <input
+                type="date"
+                id="custom-date"
+                value={customDate}
+                onChange={(e) => setCustomDate(e.target.value)}
+                min={getMinDate()}
+                required={!usePreset}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="custom-time">Select Unlock Time</label>
+              <input
+                type="time"
+                id="custom-time"
+                value={customTime}
+                onChange={(e) => setCustomTime(e.target.value)}
+                required={!usePreset}
+              />
+            </div>
+          </div>
+        )}
 
         <div className="form-group">
           <label>Delivery Method</label>
