@@ -3,72 +3,153 @@ import { Link } from 'react-router-dom';
 function HomePage() {
   return (
     <div className="home-page">
-      <section className="hero-section">
-        <div className="hero-content">
-          <div className="hero-icon">⏳</div>
-          <h1 className="hero-title">
-            Preserve Your Memories,
+      <section className="story-hero">
+        <div className="story-hero-content">
+          <p className="story-prelude">Chapter One</p>
+          <h1 className="story-title">
+            A Letter to
             <br />
-            Unlock Your Future
+            <span className="story-title-highlight">Your Future Self</span>
           </h1>
-          <p className="hero-subtitle">
-            Create digital time capsules that securely store your messages, photos, and memories.
-            <br />
-            Receive them at the perfect moment in the future.
+          <div className="story-divider">✦</div>
+          <p className="story-opening">
+            Imagine discovering a message from yourself—written years ago, when your dreams were different,
+            your fears unnamed, and your path uncertain. What would you tell that future version of you?
+            What hopes would you preserve? What moments would you seal in time?
           </p>
-          <div className="hero-buttons">
-            <Link to="/create" className="btn btn-primary">
-              Create Your First Capsule
-            </Link>
-            <Link to="/how-it-works" className="btn btn-secondary">
-              How It Works
-            </Link>
+        </div>
+        <div className="scroll-indicator">
+          <span>Scroll to begin your journey</span>
+          <div className="scroll-arrow">↓</div>
+        </div>
+      </section>
+
+      <section className="story-narrative">
+        <div className="narrative-content">
+          <div className="narrative-chapter">
+            <span className="chapter-number">I</span>
+            <h2 className="narrative-title">The Art of Remembering</h2>
+            <p className="narrative-text">
+              We live in a world of constant motion, where moments slip through our fingers like sand.
+              Today's triumphs become tomorrow's distant memories. The person you are now—with all your
+              hopes, dreams, and uncertainties—will one day feel like a stranger.
+            </p>
+            <p className="narrative-text">
+              But what if you could capture this moment? Not just as a photograph or a note, but as a
+              complete snapshot of who you are, sealed away from time itself, waiting for the day when
+              you need to remember.
+            </p>
+          </div>
+
+          <div className="narrative-interlude">
+            <div className="interlude-icon">⏳</div>
+            <p className="interlude-text">
+              Time is both our greatest gift and our deepest mystery
+            </p>
+          </div>
+
+          <div className="narrative-chapter">
+            <span className="chapter-number">II</span>
+            <h2 className="narrative-title">Your Personal Time Machine</h2>
+            <p className="narrative-text">
+              TimeVault is more than a digital service—it's a bridge between who you are and who
+              you'll become. A sacred space where you can speak freely to your future self, knowing
+              these words will remain untouched, unread, and perfectly preserved until the moment
+              you choose.
+            </p>
+            <div className="story-features">
+              <div className="story-feature">
+                <span className="feature-label">Write</span>
+                <p className="feature-desc">Pour your heart into words that only your future self will read</p>
+              </div>
+              <div className="story-feature">
+                <span className="feature-label">Preserve</span>
+                <p className="feature-desc">Add photos, videos, voice memos—anything that captures this moment</p>
+              </div>
+              <div className="story-feature">
+                <span className="feature-label">Seal</span>
+                <p className="feature-desc">Lock it away from the world, even from yourself</p>
+              </div>
+              <div className="story-feature">
+                <span className="feature-label">Receive</span>
+                <p className="feature-desc">Rediscover yourself when the time is right</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="narrative-chapter">
+            <span className="chapter-number">III</span>
+            <h2 className="narrative-title">Stories Worth Preserving</h2>
+            <p className="narrative-text">
+              Every capsule tells a story. A college graduate writing to themselves on their first day
+              of retirement. A new parent capturing the overwhelming love and fear of bringing life into
+              the world. A dreamer documenting their ambitions before the journey begins.
+            </p>
+            <div className="story-moments">
+              <div className="moment-card">
+                <div className="moment-icon">🎓</div>
+                <h3 className="moment-title">The Graduate</h3>
+                <p className="moment-story">
+                  "Today I walked across that stage. I don't know where I'll be in ten years, but I hope
+                  you remember this feeling—the fear, the excitement, the endless possibility."
+                </p>
+              </div>
+              <div className="moment-card">
+                <div className="moment-icon">💍</div>
+                <h3 className="moment-title">The Promise</h3>
+                <p className="moment-story">
+                  "I'm writing this on our wedding day. Remember how it felt—this pure, overwhelming joy.
+                  On our tenth anniversary, let's read this together."
+                </p>
+              </div>
+              <div className="moment-card">
+                <div className="moment-icon">🌱</div>
+                <h3 className="moment-title">The Beginning</h3>
+                <p className="moment-story">
+                  "I'm starting something new today. I'm terrified. I hope when you read this, you're proud
+                  of what we built together—you and me, past and future."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="narrative-interlude">
+            <div className="interlude-icon">✦</div>
+            <p className="interlude-text">
+              The most profound conversations are often with ourselves
+            </p>
+          </div>
+
+          <div className="narrative-chapter">
+            <span className="chapter-number">IV</span>
+            <h2 className="narrative-title">Your Story Begins Now</h2>
+            <p className="narrative-text">
+              What will you tell your future self? What truth do you need to preserve? What moment
+              deserves to be frozen in time, waiting for the day when you need to remember who you were
+              and what you felt?
+            </p>
+            <p className="narrative-text">
+              The page is blank. The time is yours. Your story awaits.
+            </p>
+            <div className="story-cta">
+              <Link to="/create" className="story-button">
+                Begin Your Story
+              </Link>
+              <p className="story-cta-note">
+                Create your first time capsule in moments
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="features-section">
-        <h2 className="section-title">Why Choose TimeVault?</h2>
-        <div className="features-grid">
-          <div className="feature-card">
-            <div className="feature-icon">🔒</div>
-            <h3>Secure & Private</h3>
-            <p>Your capsules are encrypted and locked. Nobody can access them until the unlock date, not even you.</p>
-          </div>
-          <div className="feature-card">
-            <div className="feature-icon">📅</div>
-            <h3>Flexible Scheduling</h3>
-            <p>Choose preset time periods or set a custom date and time for when you want to receive your capsule.</p>
-          </div>
-          <div className="feature-card">
-            <div className="feature-icon">📱</div>
-            <h3>Multi-Format Support</h3>
-            <p>Store text messages, images, videos, audio recordings, and documents in your time capsules.</p>
-          </div>
-          <div className="feature-card">
-            <div className="feature-icon">✉️</div>
-            <h3>Smart Delivery</h3>
-            <p>Receive your capsules via email or SMS exactly when you scheduled them to unlock.</p>
-          </div>
-          <div className="feature-card">
-            <div className="feature-icon">🎯</div>
-            <h3>No Account Required</h3>
-            <p>Create capsules instantly without signing up. Just provide your delivery details and you're done.</p>
-          </div>
-          <div className="feature-card">
-            <div className="feature-icon">⏰</div>
-            <h3>Live Countdown</h3>
-            <p>Track exactly how much time remains until your capsule unlocks with a real-time countdown timer.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="cta-section">
-        <div className="cta-content">
-          <h2>Ready to Create Your First Time Capsule?</h2>
-          <p>Start preserving your memories and messages for the future today.</p>
-          <Link to="/create" className="btn btn-primary btn-large">
-            Get Started Now
+      <section className="story-epilogue">
+        <div className="epilogue-content">
+          <p className="epilogue-quote">
+            "Time is a gift, and what we do with it is our story to write."
+          </p>
+          <Link to="/about" className="epilogue-link">
+            Learn more about our mission →
           </Link>
         </div>
       </section>
