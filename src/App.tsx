@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import AnimatedBackground from './components/AnimatedBackground';
 import HomePage from './pages/HomePage';
 import CreatePage from './pages/CreatePage';
 import ConfirmationPage from './pages/ConfirmationPage';
@@ -13,6 +14,7 @@ function App() {
     <ThemeProvider>
       <Router>
         <div className="app">
+          <AnimatedBackground />
           <Header />
           <main className="main-content">
             <Routes>
