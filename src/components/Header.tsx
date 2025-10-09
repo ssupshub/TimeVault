@@ -9,25 +9,29 @@ function Header() {
     return location.pathname === path ? 'active' : '';
   };
 
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className="main-header">
       <div className="header-container">
-        <Link to="/" className="logo-link">
+        <Link to="/" className="logo-link" onClick={handleNavClick}>
           <div className="logo-icon">⏳</div>
           <span className="logo-text">TimeVault</span>
         </Link>
 
         <nav className="main-nav">
-          <Link to="/" className={`nav-link ${isActive('/')}`}>
+          <Link to="/" className={`nav-link ${isActive('/')}`} onClick={handleNavClick}>
             Home
           </Link>
-          <Link to="/how-it-works" className={`nav-link ${isActive('/how-it-works')}`}>
+          <Link to="/how-it-works" className={`nav-link ${isActive('/how-it-works')}`} onClick={handleNavClick}>
             How It Works
           </Link>
-          <Link to="/about" className={`nav-link ${isActive('/about')}`}>
+          <Link to="/about" className={`nav-link ${isActive('/about')}`} onClick={handleNavClick}>
             About
           </Link>
-          <Link to="/create" className="nav-link-cta">
+          <Link to="/create" className="nav-link-cta" onClick={handleNavClick}>
             Create Capsule
           </Link>
         </nav>
