@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   color: var(--text-secondary);
   font-weight: 500;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   letter-spacing: 0.02em;
   transition: color 0.3s ease;
   position: relative;
@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2rem;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.02em;
@@ -269,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .story-title {
   font-family: 'Playfair Display', serif;
-  font-size: 5rem;
+  font-size: 5.5rem;
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 2.5rem;
@@ -294,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .story-opening {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
+  font-size: 1.625rem;
   line-height: 2;
   color: var(--text-secondary);
   max-width: 800px;
@@ -385,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .narrative-title {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 3.25rem;
   font-weight: 600;
   margin-bottom: 2rem;
   color: var(--text-primary);
@@ -395,7 +395,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .narrative-text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   line-height: 2;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
@@ -448,7 +448,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-desc {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: var(--text-secondary);
   font-weight: 400;
@@ -503,7 +503,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .moment-story {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   line-height: 1.9;
   color: var(--text-secondary);
   font-style: italic;

@@ -5,7 +5,6 @@ function HomePage() {
     <div className="home-page">
       <section className="story-hero">
         <div className="story-hero-content">
-          <p className="story-prelude">Chapter One</p>
           <h1 className="story-title">
             A Letter to
             <br />
@@ -17,10 +16,6 @@ function HomePage() {
             your fears unnamed, and your path uncertain. What would you tell that future version of you?
             What hopes would you preserve? What moments would you seal in time?
           </p>
-        </div>
-        <div className="scroll-indicator">
-          <span>Scroll to begin your journey</span>
-          <div className="scroll-arrow">↓</div>
         </div>
       </section>
 
