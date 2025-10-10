@@ -58,6 +58,14 @@ function AboutPage() {
               <h3>💝 Personal Touch</h3>
               <p>Every capsule is a personal journey. We respect the intimacy and importance of your messages.</p>
             </div>
+            <div className="difference-item">
+              <h3>🌐 Accessible Anywhere</h3>
+              <p>Access your capsules from any device, anytime, anywhere. Your memories travel with you.</p>
+            </div>
+            <div className="difference-item">
+              <h3>🎁 Free to Use</h3>
+              <p>Create unlimited time capsules at no cost. No hidden fees, no premium tiers, just pure preservation.</p>
+            </div>
           </div>
         </section>
 

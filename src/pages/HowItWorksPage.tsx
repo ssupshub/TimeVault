@@ -76,6 +76,11 @@ function HowItWorksPage() {
             <h4>Secure Storage</h4>
             <p>Files are stored in encrypted cloud storage with enterprise-grade security standards.</p>
           </div>
+          <div className="security-item">
+            <div className="security-icon">🔒</div>
+            <h4>Private by Design</h4>
+            <p>Your data is never shared with third parties. Only you can access your capsules when they unlock.</p>
+          </div>
         </div>
       </div>
 
