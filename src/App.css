@@ -1216,9 +1216,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: var(--text-secondary);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .about-content {
@@ -1239,13 +1239,13 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 1rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
 }
 
 .difference-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -1258,7 +1258,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .difference-item h3 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: var(--text-primary);
@@ -1267,8 +1267,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .difference-item p {
   color: var(--text-secondary);
-  font-size: 0.9375rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.7;
   font-family: 'Inter', sans-serif;
 }
 
@@ -1287,6 +1287,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   font-family: 'Inter', sans-serif;
+  font-size: 1rem;
 }
 
 .privacy-section {
@@ -1315,6 +1316,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.125rem;
   margin-bottom: 2rem;
   opacity: 0.95;
+  font-family: 'Inter', sans-serif;
   font-family: 'Cormorant Garamond', serif;
 }
 
