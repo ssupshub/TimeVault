@@ -99,7 +99,7 @@ function AboutPage() {
         <div className="about-cta">
           <h3>Ready to Start Your Journey?</h3>
           <p>Create your first time capsule and begin a conversation with your future self</p>
-          <Link to="/create" className="btn btn-primary">
+          <Link to="/create" className="btn btn-primary" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             Create Time Capsule
           </Link>
         </div>

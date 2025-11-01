@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
   transition: color 0.3s ease;
   position: relative;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .nav-link:hover {
@@ -182,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   letter-spacing: 0.02em;
 }
 
@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .story-opening {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 1.125rem;
   line-height: 1.8;
   color: var(--text-secondary);
@@ -320,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -399,7 +399,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .narrative-text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 1.125rem;
   line-height: 1.8;
   color: var(--text-secondary);
@@ -441,7 +441,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -452,7 +452,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-desc {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-secondary);
@@ -507,7 +507,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .moment-story {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-secondary);
@@ -533,7 +533,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 3rem;
   border-radius: 3rem;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-weight: 600;
   font-size: 1.125rem;
   letter-spacing: 0.02em;
@@ -583,7 +583,7 @@ h1, h2, h3, h4, h5, h6 {
 .epilogue-link {
   color: white;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -605,7 +605,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   transition: all 0.3s ease;
   display: inline-block;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .btn-primary {
@@ -688,7 +688,7 @@ h1, h2, h3, h4, h5, h6 {
 .feature-card p {
   color: var(--text-secondary);
   line-height: 1.7;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .cta-section {
@@ -779,7 +779,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .form-group input[type='text'],
@@ -794,7 +794,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.5rem;
   font-size: 1rem;
   transition: all 0.2s;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   background: var(--bg-primary);
   color: var(--text-primary);
 }
@@ -849,7 +849,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   font-weight: 500;
   color: var(--text-secondary);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .radio-label input[type='radio'] {
@@ -872,7 +872,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.5rem;
   font-size: 0.875rem;
   border-left: 4px solid #dc2626;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .submit-button {
@@ -887,7 +887,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s;
   margin-top: 1rem;
   box-shadow: var(--shadow-md);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   letter-spacing: 0.02em;
 }
 
@@ -960,7 +960,7 @@ h1, h2, h3, h4, h5, h6 {
 .info-label {
   font-weight: 600;
   color: var(--text-secondary);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1012,7 +1012,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   opacity: 0.9;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .warning-box {
@@ -1026,7 +1026,7 @@ h1, h2, h3, h4, h5, h6 {
 .warning-box p {
   font-size: 0.9375rem;
   line-height: 1.6;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .warning-box strong {
@@ -1124,7 +1124,7 @@ h1, h2, h3, h4, h5, h6 {
 .step-content p {
   color: var(--text-secondary);
   line-height: 1.7;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .step-arrow {
@@ -1177,7 +1177,7 @@ h1, h2, h3, h4, h5, h6 {
 .security-item p {
   color: var(--text-secondary);
   line-height: 1.6;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .cta-box {
@@ -1218,7 +1218,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-subtitle {
   font-size: 1.125rem;
   color: var(--text-secondary);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .about-content {
@@ -1239,7 +1239,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 1.125rem;
 }
 
@@ -1269,7 +1269,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   font-size: 1rem;
   line-height: 1.7;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .use-cases-list {
@@ -1286,7 +1286,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.5rem;
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 1rem;
 }
 
@@ -1316,7 +1316,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.125rem;
   margin-bottom: 2rem;
   opacity: 0.95;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
   font-family: 'Cormorant Garamond', serif;
 }
 
@@ -1329,20 +1329,21 @@ h1, h2, h3, h4, h5, h6 {
 .footer-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 4rem 2rem 2rem;
+  padding: 2.5rem 2rem 1.5rem;
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 2fr 1fr;
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  align-items: start;
 }
 
 .footer-section h4 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: var(--text-primary);
   font-family: 'Playfair Display', serif;
 }
@@ -1351,13 +1352,15 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .footer-tagline {
   color: var(--text-secondary);
   line-height: 1.6;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
 
 .footer-links {
@@ -1365,14 +1368,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-links li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-links a {
   color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .footer-links a:hover {
@@ -1382,15 +1385,16 @@ h1, h2, h3, h4, h5, h6 {
 .footer-description {
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 1rem;
-  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.75rem;
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
 }
 
 .footer-email {
   color: var(--primary-600);
   text-decoration: none;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 .footer-email:hover {
@@ -1399,10 +1403,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-bottom {
   border-top: 1px solid var(--border-color);
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   text-align: center;
   color: var(--text-secondary);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
 }
 
 .footer-note {
