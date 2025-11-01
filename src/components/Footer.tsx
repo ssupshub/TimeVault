@@ -22,8 +22,8 @@ function Footer() {
             <p className="footer-description">
               Questions or feedback? We'd love to hear from you.
             </p>
-            <a href="mailto:hello@timevault.app" className="footer-email">
-              hello@timevault.app
+            <a href="mailto:subhamchauhan1310@gmail.com" className="footer-email">
+              subhamchauhan1310@gmail.com
             </a>
           </div>
 
