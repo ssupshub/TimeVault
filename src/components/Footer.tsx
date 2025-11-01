@@ -11,7 +11,7 @@ function Footer() {
     <footer className="main-footer">
       <div className="footer-container">
         <div className="footer-content">
-          <div className="footer-section">
+          <div className="footer-section footer-branding">
             <div className="footer-logo">
               <div className="logo-icon">⏳</div>
               <span className="logo-text">TimeVault</span>
@@ -19,9 +19,15 @@ function Footer() {
             <p className="footer-tagline">
               Preserve your memories, unlock your future
             </p>
+            <p className="footer-description">
+              Questions or feedback? We'd love to hear from you.
+            </p>
+            <a href="mailto:hello@timevault.app" className="footer-email">
+              hello@timevault.app
+            </a>
           </div>
 
-          <div className="footer-section">
+          <div className="footer-section footer-links-section">
             <h4>Quick Links</h4>
             <ul className="footer-links">
               <li><Link to="/" onClick={handleNavClick}>Home</Link></li>
@@ -29,26 +35,6 @@ function Footer() {
               <li><Link to="/how-it-works" onClick={handleNavClick}>How It Works</Link></li>
               <li><Link to="/about" onClick={handleNavClick}>About Us</Link></li>
             </ul>
-          </div>
-
-          <div className="footer-section">
-            <h4>Resources</h4>
-            <ul className="footer-links">
-              <li><a href="#privacy">Privacy Policy</a></li>
-              <li><a href="#terms">Terms of Service</a></li>
-              <li><a href="#security">Security</a></li>
-              <li><a href="#support">Support</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
-            <h4>Connect</h4>
-            <p className="footer-description">
-              Questions or feedback? We'd love to hear from you.
-            </p>
-            <a href="mailto:hello@timevault.app" className="footer-email">
-              hello@timevault.app
-            </a>
           </div>
         </div>
 
