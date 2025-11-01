@@ -127,7 +127,7 @@ function HomePage() {
               The page is blank. The time is yours. Your story awaits.
             </p>
             <div className="story-cta">
-              <Link to="/create" className="story-button">
+              <Link to="/create" className="story-button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 Begin Your Story
               </Link>
               <p className="story-cta-note">
@@ -143,7 +143,7 @@ function HomePage() {
           <p className="epilogue-quote">
             "Time is a gift, and what we do with it is our story to write."
           </p>
-          <Link to="/about" className="epilogue-link">
+          <Link to="/about" className="epilogue-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             Learn more about our mission →
           </Link>
         </div>
