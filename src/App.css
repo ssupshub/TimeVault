@@ -63,12 +63,13 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Lora', 'Georgia', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.8;
+  font-size: 1.05rem;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -299,8 +300,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .story-opening {
   font-family: 'Lora', serif;
-  font-size: 1.125rem;
-  line-height: 1.8;
+  font-size: 1.3rem;
+  line-height: 1.9;
   color: var(--text-secondary);
   max-width: 800px;
   margin: 0 auto;
@@ -390,7 +391,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .narrative-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 600;
   margin-bottom: 2rem;
   color: var(--text-primary);
@@ -400,8 +401,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .narrative-text {
   font-family: 'Lora', serif;
-  font-size: 1.125rem;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  line-height: 1.9;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   font-weight: 400;
@@ -421,11 +422,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .interlude-text {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   font-style: italic;
   color: var(--text-tertiary);
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .story-features {
@@ -453,8 +454,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-desc {
   font-family: 'Lora', serif;
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: var(--text-secondary);
   font-weight: 400;
 }
@@ -508,8 +509,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .moment-story {
   font-family: 'Lora', serif;
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.08rem;
+  line-height: 1.8;
   color: var(--text-secondary);
   font-style: italic;
   font-weight: 400;
@@ -535,7 +536,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   font-family: 'Lora', serif;
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 1.15rem;
   letter-spacing: 0.02em;
   transition: all 0.4s ease;
   box-shadow: var(--shadow-md);
@@ -547,8 +548,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .story-cta-note {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
   color: var(--text-tertiary);
   margin-top: 1rem;
   font-style: italic;
@@ -572,10 +573,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .epilogue-quote {
   font-family: 'Playfair Display', serif;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-style: italic;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 2rem;
   opacity: 0.95;
 }
@@ -584,7 +585,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   text-decoration: none;
   font-family: 'Lora', serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.05em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -602,7 +603,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.5rem;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.05rem;
   transition: all 0.3s ease;
   display: inline-block;
   font-family: 'Lora', serif;
@@ -644,7 +645,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 700;
   margin-bottom: 4rem;
   color: var(--text-primary);
@@ -687,8 +688,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-card p {
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.8;
   font-family: 'Lora', serif;
+  font-size: 1.05rem;
 }
 
 .cta-section {
@@ -711,10 +713,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-content p {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   margin-bottom: 2rem;
   opacity: 0.95;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
+  line-height: 1.8;
 }
 
 .capsule-form-container,
@@ -748,7 +751,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
   font-weight: 700;
@@ -757,8 +760,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .subtitle {
   color: var(--text-secondary);
-  font-size: 1.125rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-family: 'Lora', serif;
+  line-height: 1.8;
 }
 
 .capsule-form {
@@ -792,7 +796,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.875rem;
   border: 2px solid var(--border-color);
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   transition: all 0.2s;
   font-family: 'Lora', serif;
   background: var(--bg-primary);
@@ -810,8 +814,8 @@ h1, h2, h3, h4, h5, h6 {
 .form-group textarea {
   resize: vertical;
   min-height: 120px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.125rem;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
   line-height: 1.8;
 }
 
@@ -850,6 +854,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   color: var(--text-secondary);
   font-family: 'Lora', serif;
+  font-size: 1.05rem;
 }
 
 .radio-label input[type='radio'] {
@@ -881,7 +886,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 2rem;
   border: none;
   border-radius: 3rem;
-  font-size: 1.125rem;
+  font-size: 1.15rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
@@ -933,9 +938,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .success-message {
   color: var(--text-secondary);
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
+  line-height: 1.8;
 }
 
 .info-box {
@@ -969,8 +975,8 @@ h1, h2, h3, h4, h5, h6 {
 .info-value {
   color: var(--text-primary);
   font-weight: 500;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.125rem;
+  font-family: 'Lora', serif;
+  font-size: 1.15rem;
 }
 
 .countdown-box {
@@ -1024,8 +1030,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .warning-box p {
-  font-size: 0.9375rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.7;
   font-family: 'Lora', serif;
 }
 
@@ -1046,7 +1052,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-header h1 {
-  font-size: 3rem;
+  font-size: 3.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--text-primary);
@@ -1054,9 +1060,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: var(--text-secondary);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
+  line-height: 1.8;
 }
 
 .steps-container {
@@ -1123,8 +1130,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .step-content p {
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.8;
   font-family: 'Lora', serif;
+  font-size: 1.05rem;
 }
 
 .step-arrow {
@@ -1144,7 +1152,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .security-section h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 2rem;
   color: var(--text-primary);
@@ -1167,7 +1175,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .security-item h4 {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
@@ -1176,8 +1184,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .security-item p {
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.8;
   font-family: 'Lora', serif;
+  font-size: 1.05rem;
 }
 
 .cta-box {
@@ -1196,10 +1205,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-box p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   margin-bottom: 2rem;
   opacity: 0.95;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
+  line-height: 1.8;
 }
 
 .about-hero {
@@ -1208,7 +1218,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-hero h1 {
-  font-size: 3rem;
+  font-size: 3.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--text-primary);
@@ -1216,9 +1226,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-subtitle {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--text-secondary);
   font-family: 'Lora', serif;
+  line-height: 1.8;
 }
 
 .about-content {
@@ -1228,7 +1239,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-section h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
@@ -1237,10 +1248,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-section p {
   color: var(--text-secondary);
-  line-height: 1.8;
+  line-height: 1.9;
   margin-bottom: 1rem;
   font-family: 'Lora', serif;
-  font-size: 1.125rem;
+  font-size: 1.2rem;
 }
 
 .difference-grid {
@@ -1267,8 +1278,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .difference-item p {
   color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.08rem;
+  line-height: 1.8;
   font-family: 'Lora', serif;
 }
 
@@ -1287,7 +1298,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   font-family: 'Lora', serif;
-  font-size: 1rem;
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 
 .privacy-section {
