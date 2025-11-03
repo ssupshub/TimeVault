@@ -758,11 +758,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
 
-.create-page .header h1 {
-  font-style: italic;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
 
 .subtitle {
   color: var(--text-secondary);
@@ -786,12 +781,10 @@ h1, h2, h3, h4, h5, h6 {
 .form-group label {
   font-weight: 600;
   color: var(--text-primary);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  opacity: 0.85;
+  letter-spacing: 0.05em;
+  font-family: 'Lora', serif;
 }
 
 .form-group input[type='text'],
