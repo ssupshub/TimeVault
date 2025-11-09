@@ -1,17 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import './AnimatedBackground.css';
 
 declare global {
   interface Window {
-    WavePrism?: {
-      create: (container: HTMLElement) => void;
-    };
+    FramerWavePrism?: any;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'framer-wave-prism': any;
+    }
   }
 }
 
 const AnimatedBackground = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [waveContainer, setWaveContainer] = useState<HTMLDivElement | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,18 +26,34 @@ const AnimatedBackground = () => {
   }, []);
 
   useEffect(() => {
-    if (waveContainer && window.WavePrism) {
-      try {
-        window.WavePrism.create(waveContainer);
-      } catch (error) {
-        console.log('Wave Prism component loaded');
+    const script = document.createElement('script');
+    script.src = 'https://framer.com/m/WavePrism-prod-knue.js';
+    script.async = true;
+    script.onload = () => {
+      if (containerRef.current && window.FramerWavePrism) {
+        const canvas = document.createElement('canvas');
+        canvas.className = 'wave-prism-canvas';
+        if (containerRef.current.firstChild) {
+          containerRef.current.replaceChild(canvas, containerRef.current.firstChild);
+        } else {
+          containerRef.current.appendChild(canvas);
+        }
       }
-    }
-  }, [waveContainer]);
+    };
+    document.head.appendChild(script);
+
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <div className="animated-background">
-      <div ref={setWaveContainer} className="wave-prism-container" />
+      <div ref={containerRef} className="wave-prism-container">
+        <canvas className="wave-prism-canvas" />
+      </div>
       <div
         className="shape shape-1"
         style={{ transform: `translateY(${scrollY * 0.3}px) rotate(${scrollY * 0.1}deg)` }}
