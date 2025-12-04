@@ -10,8 +10,6 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
   const [file, setFile] = useState<File | null>(null);
   const [deliveryMethod, setDeliveryMethod] = useState<'email' | 'sms'>('email');
   const [deliveryTarget, setDeliveryTarget] = useState('');
-  const [usePreset, setUsePreset] = useState(true);
-  const [unlockPeriod, setUnlockPeriod] = useState('1');
   const [customDate, setCustomDate] = useState('');
   const [customTime, setCustomTime] = useState('12:00');
   const [loading, setLoading] = useState(false);
@@ -24,14 +22,8 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
   };
 
   const calculateUnlockDate = (): Date => {
-    if (usePreset) {
-      const date = new Date();
-      date.setFullYear(date.getFullYear() + parseInt(unlockPeriod));
-      return date;
-    } else {
-      const dateTimeString = `${customDate}T${customTime}`;
-      return new Date(dateTimeString);
-    }
+    const dateTimeString = `${customDate}T${customTime}`;
+    return new Date(dateTimeString);
   };
 
   const getMinDate = () => {
@@ -72,8 +64,8 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
         fileType = getFileType(file);
       }
 
-      if (!usePreset && !customDate) {
-        throw new Error('Please select a custom unlock date');
+      if (!customDate) {
+        throw new Error('Please select an unlock date');
       }
 
       const unlockDate = calculateUnlockDate();
@@ -137,66 +129,33 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
           {file && <p className="file-name">{file.name}</p>}
         </div>
 
-        <div className="form-group">
-          <label>Choose Your Unlock Time</label>
-          <div className="radio-group">
-            <label className="radio-label">
-              <input
-                type="radio"
-                checked={usePreset}
-                onChange={() => setUsePreset(true)}
-              />
-              <span>Quick Select</span>
-            </label>
-            <label className="radio-label">
-              <input
-                type="radio"
-                checked={!usePreset}
-                onChange={() => setUsePreset(false)}
-              />
-              <span>Custom Date & Time</span>
-            </label>
-          </div>
-        </div>
-
-        {usePreset ? (
-          <div className="form-group">
-            <label htmlFor="unlock-period">Select Time Period</label>
-            <select
-              id="unlock-period"
-              value={unlockPeriod}
-              onChange={(e) => setUnlockPeriod(e.target.value)}
-            >
-              <option value="1">1 Year from now</option>
-              <option value="5">5 Years from now</option>
-              <option value="10">10 Years from now</option>
-            </select>
-          </div>
-        ) : (
-          <div className="custom-datetime-group">
+        <div className="unlock-section">
+          <h3 className="section-title">Select Unlock Date & Time</h3>
+          <p className="section-subtitle">Choose when your capsule will be delivered</p>
+          <div className="datetime-inputs">
             <div className="form-group">
-              <label htmlFor="custom-date">Select Unlock Date</label>
+              <label htmlFor="custom-date">Date</label>
               <input
                 type="date"
                 id="custom-date"
                 value={customDate}
                 onChange={(e) => setCustomDate(e.target.value)}
                 min={getMinDate()}
-                required={!usePreset}
+                required
               />
             </div>
             <div className="form-group">
-              <label htmlFor="custom-time">Select Unlock Time</label>
+              <label htmlFor="custom-time">Time</label>
               <input
                 type="time"
                 id="custom-time"
                 value={customTime}
                 onChange={(e) => setCustomTime(e.target.value)}
-                required={!usePreset}
+                required
               />
             </div>
           </div>
-        )}
+        </div>
 
         <div className="form-group">
           <label>Delivery Method</label>
