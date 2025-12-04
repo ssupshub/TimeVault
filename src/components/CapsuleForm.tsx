@@ -192,7 +192,7 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
             onChange={(e) => setDeliveryTarget(e.target.value)}
             placeholder={
               deliveryMethod === 'email'
-                ? 'your@email.com'
+                ? 'janedoe@email.com'
                 : '+1234567890'
             }
             required
