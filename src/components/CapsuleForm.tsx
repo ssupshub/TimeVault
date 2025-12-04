@@ -119,7 +119,7 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="file">Upload File (Optional)</label>
+          <label htmlFor="file">Upload File </label>
           <input
             type="file"
             id="file"
