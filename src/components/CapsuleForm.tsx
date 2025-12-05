@@ -14,6 +14,7 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
   const [customTime, setCustomTime] = useState('12:00');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [dragActive, setDragActive] = useState(false);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -37,6 +38,40 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
     if (file.type.startsWith('video/')) return 'video';
     if (file.type.startsWith('audio/')) return 'audio';
     return 'document';
+  };
+
+  const getFileIcon = (file: File): string => {
+    if (file.type.startsWith('image/')) return '🖼️';
+    if (file.type.startsWith('video/')) return '🎬';
+    if (file.type.startsWith('audio/')) return '🎵';
+    return '📄';
+  };
+
+  const formatFileSize = (bytes: number): string => {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return Math.round((bytes / Math.pow(k, i)) * 100) / 100 + ' ' + sizes[i];
+  };
+
+  const handleDrag = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.type === 'dragenter' || e.type === 'dragover') {
+      setDragActive(true);
+    } else if (e.type === 'dragleave') {
+      setDragActive(false);
+    }
+  };
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      setFile(e.dataTransfer.files[0]);
+    }
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -119,14 +154,48 @@ function CapsuleForm({ onCapsuleCreated }: CapsuleFormProps) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="file">Upload File </label>
-          <input
-            type="file"
-            id="file"
-            onChange={handleFileChange}
-            accept="image/*,video/*,audio/*,.pdf,.doc,.docx"
-          />
-          {file && <p className="file-name">{file.name}</p>}
+          <label>Upload File (Optional)</label>
+          <div
+            className={`file-upload-zone ${dragActive ? 'active' : ''} ${file ? 'has-file' : ''}`}
+            onDragEnter={handleDrag}
+            onDragLeave={handleDrag}
+            onDragOver={handleDrag}
+            onDrop={handleDrop}
+          >
+            <input
+              type="file"
+              id="file"
+              onChange={handleFileChange}
+              accept="image/*,video/*,audio/*,.pdf,.doc,.docx"
+              className="file-input"
+            />
+            {file ? (
+              <div className="file-preview">
+                <div className="file-icon">{getFileIcon(file)}</div>
+                <div className="file-info">
+                  <p className="file-name">{file.name}</p>
+                  <p className="file-size">{formatFileSize(file.size)}</p>
+                </div>
+                <button
+                  type="button"
+                  className="remove-file-btn"
+                  onClick={() => setFile(null)}
+                >
+                  ✕
+                </button>
+              </div>
+            ) : (
+              <div className="upload-prompt">
+                <div className="upload-icon">📤</div>
+                <p className="upload-text">
+                  Drag your file here or <span className="click-text">click to browse</span>
+                </p>
+                <p className="upload-hint">
+                  Supports images, videos, audio, PDFs, and documents
+                </p>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="unlock-section">
