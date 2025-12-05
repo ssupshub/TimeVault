@@ -817,11 +817,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-group label {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-primary);
   font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   font-family: 'Lora', serif;
 }
 
@@ -890,7 +889,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-secondary);
   font-family: 'Lora', serif;
   font-size: 1.05rem;
