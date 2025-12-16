@@ -231,12 +231,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .story-hero {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   position: relative;
   background:
     radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
@@ -356,11 +356,11 @@ h1, h2, h3, h4, h5, h6 {
 .narrative-content {
   max-width: 800px;
   margin: 0 auto;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
 }
 
 .narrative-chapter {
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   position: relative;
   animation: chapterReveal 1s ease-out;
 }
@@ -410,8 +410,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .narrative-interlude {
   text-align: center;
-  padding: 6rem 2rem;
-  margin: 4rem 0;
+  padding: 2rem 2rem;
+  margin: 2rem 0;
 }
 
 .interlude-icon {
@@ -463,13 +463,13 @@ h1, h2, h3, h4, h5, h6 {
 .story-moments {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
-  margin-top: 3rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .moment-card {
   background: var(--bg-elevated);
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 1rem;
   border: 1px solid var(--border-color);
   transition: all 0.4s ease;
@@ -520,8 +520,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .story-cta {
   text-align: center;
-  margin-top: 4rem;
-  padding: 3rem;
+  margin-top: 3rem;
+  padding: 2.5rem;
   background: var(--bg-elevated);
   border-radius: 1rem;
   border: 1px solid var(--border-color);
@@ -558,7 +558,7 @@ h1, h2, h3, h4, h5, h6 {
 .story-epilogue {
   background: var(--gradient-primary);
   color: white;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
