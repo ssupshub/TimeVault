@@ -1,94 +1,100 @@
 import { Link } from 'react-router-dom';
 
 function HowItWorksPage() {
+  const steps = [
+    {
+      n: '01',
+      title: 'Craft Your Message',
+      body: 'Write a message to your future self. Share your thoughts, goals, dreams, or memories you want to preserve. Optionally attach photos, videos, audio, or documents.',
+    },
+    {
+      n: '02',
+      title: 'Choose Your Unlock Time',
+      body: 'Select the precise date and time you want your capsule delivered. It could be next year, a decade from now, or a milestone like a birthday or anniversary.',
+    },
+    {
+      n: '03',
+      title: 'Set Your Delivery Method',
+      body: 'Choose how you want to receive your capsule when it unlocks — via email or SMS. Enter the address or number where it should arrive.',
+    },
+    {
+      n: '04',
+      title: 'Seal & Forget',
+      body: 'Once sealed, your capsule is truly locked. No one — not even you — can view, edit, or delete it until the scheduled moment. Trust the process.',
+    },
+    {
+      n: '05',
+      title: 'Automatic Delivery',
+      body: 'When your unlock date arrives, your time capsule is automatically delivered. Open it and rediscover the person you were.',
+    },
+  ];
+
+  const security = [
+    { icon: '🔐', title: 'Row-Level Security', body: 'All capsules are protected with PostgreSQL row-level security policies ensuring complete isolation.' },
+    { icon: '🚫', title: 'Zero Access Until Due', body: 'Once sealed, not even system administrators can read the contents. The lock is absolute.' },
+    { icon: '☁️', title: 'Encrypted Cloud Storage', body: 'All files are stored with enterprise-grade encryption in isolated cloud storage buckets.' },
+    { icon: '🛡️', title: 'Private by Design', body: 'Your data is never analyzed, shared, or monetized. We have one job: keep your memories safe.' },
+  ];
+
   return (
     <div className="how-it-works-page">
-      <div className="page-header">
-        <h1>How TimeVault Works</h1>
-        <p className="page-subtitle">Creating a time capsule is simple and secure</p>
+      <div className="page-eyebrow">
+        <span className="page-eyebrow-line" />
+        <span className="page-eyebrow-text">The Process</span>
+      </div>
+      <h1 className="page-title">How <em>TimeVault</em><br />Works</h1>
+      <p className="page-intro">
+        Creating a digital time capsule takes under two minutes. Sealed instantly,
+        preserved indefinitely, delivered precisely.
+      </p>
+
+      <div className="steps-list">
+        {steps.map(({ n, title, body }) => (
+          <div key={n} className="step-item">
+            <div className="step-badge">
+              <div className="step-badge-inner">{n}</div>
+            </div>
+            <div className="step-content-box">
+              <div className="step-title">{title}</div>
+              <p className="step-body">{body}</p>
+            </div>
+          </div>
+        ))}
       </div>
 
-      <div className="steps-container">
-        <div className="step-card">
-          <div className="step-number">1</div>
-          <div className="step-content">
-            <h3>Create Your Capsule</h3>
-            <p>Write a message to your future self and optionally upload photos, videos, audio, or documents. Share your thoughts, goals, dreams, or memories you want to preserve.</p>
-          </div>
+      <div style={{ marginBottom: '2rem' }}>
+        <div className="page-eyebrow">
+          <span className="page-eyebrow-line" />
+          <span className="page-eyebrow-text">Security</span>
         </div>
-
-        <div className="step-arrow">↓</div>
-
-        <div className="step-card">
-          <div className="step-number">2</div>
-          <div className="step-content">
-            <h3>Choose Your Unlock Time</h3>
-            <p>Select when you want to receive your capsule. Use quick presets like 1, 5, or 10 years, or pick a custom date and time that's meaningful to you.</p>
-          </div>
-        </div>
-
-        <div className="step-arrow">↓</div>
-
-        <div className="step-card">
-          <div className="step-number">3</div>
-          <div className="step-content">
-            <h3>Set Delivery Method</h3>
-            <p>Choose how you want to receive your capsule when it unlocks. We support delivery via email or SMS to ensure you get your message at the right moment.</p>
-          </div>
-        </div>
-
-        <div className="step-arrow">↓</div>
-
-        <div className="step-card">
-          <div className="step-number">4</div>
-          <div className="step-content">
-            <h3>Seal & Forget</h3>
-            <p>Once sealed, your capsule is locked and cannot be viewed, edited, or deleted by anyone. Watch the countdown timer and wait for the magic moment!</p>
-          </div>
-        </div>
-
-        <div className="step-arrow">↓</div>
-
-        <div className="step-card highlight">
-          <div className="step-number">5</div>
-          <div className="step-content">
-            <h3>Automatic Delivery</h3>
-            <p>When your unlock date arrives, we'll automatically deliver your time capsule to you. Open it and rediscover your past thoughts and memories!</p>
-          </div>
-        </div>
+        <h2 className="page-title" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', marginBottom: '2rem' }}>
+          Your Privacy <em>Guaranteed</em>
+        </h2>
       </div>
 
-      <div className="security-section">
-        <h2>Your Privacy & Security</h2>
-        <div className="security-grid">
-          <div className="security-item">
-            <div className="security-icon">🔐</div>
-            <h4>End-to-End Protection</h4>
-            <p>All capsules are secured with row-level security policies ensuring complete privacy.</p>
+      <div className="security-grid" style={{ marginBottom: '4rem' }}>
+        {security.map(({ icon, title, body }) => (
+          <div key={title} className="security-tile">
+            <div className="security-tile-icon">{icon}</div>
+            <div className="security-tile-title">{title}</div>
+            <p className="security-tile-body">{body}</p>
           </div>
-          <div className="security-item">
-            <div className="security-icon">🚫</div>
-            <h4>Truly Locked</h4>
-            <p>Once sealed, not even you can access the capsule until the unlock date. No backdoors, no exceptions.</p>
-          </div>
-          <div className="security-item">
-            <div className="security-icon">🛡️</div>
-            <h4>Secure Storage</h4>
-            <p>Files are stored in encrypted cloud storage with enterprise-grade security standards.</p>
-          </div>
-          <div className="security-item">
-            <div className="security-icon">🔒</div>
-            <h4>Private by Design</h4>
-            <p>Your data is never shared with third parties. Only you can access your capsules when they unlock.</p>
-          </div>
-        </div>
+        ))}
       </div>
 
-      <div className="cta-box">
-        <h3>Ready to Start?</h3>
-        <p>Create your first time capsule in less than 2 minutes</p>
-        <Link to="/create" className="btn btn-primary">
-          Create Time Capsule
+      <div className="cta-band">
+        <h3 className="cta-band-title">Ready to begin?</h3>
+        <p className="cta-band-body">
+          Create your first time capsule in less than two minutes.
+          Your future self is waiting.
+        </p>
+        <Link
+          to="/create"
+          className="btn-primary"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <span>✦</span>
+          <span>Create a Time Capsule</span>
         </Link>
       </div>
     </div>
