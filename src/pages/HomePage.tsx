@@ -1,105 +1,160 @@
 import { Link } from 'react-router-dom';
 
 function HomePage() {
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
   return (
     <div className="home-page">
+
+      {/* ─── HERO ─── */}
       <section className="story-hero">
+        <div className="hero-noise" />
+        <div className="hero-orb hero-orb-1" />
+        <div className="hero-orb hero-orb-2" />
+        <div className="hero-orb hero-orb-3" />
+
         <div className="story-hero-content">
+          <div className="hero-eyebrow">
+            <span className="eyebrow-line" />
+            <span className="eyebrow-text">Digital Time Capsules</span>
+            <span className="eyebrow-line" />
+          </div>
+
           <h1 className="story-title">
-            A Letter to
-            <br />
-            <span className="story-title-highlight">Your Future Self</span>
+            <em>A Letter to</em>
+            <span className="title-accent">Your Future Self</span>
           </h1>
-          <div className="story-divider">✦</div>
+
+          <div className="hero-rule">
+            <span className="hero-rule-line" />
+            <span className="hero-rule-diamond" />
+            <span className="hero-rule-line" />
+          </div>
+
           <p className="story-opening">
-            Imagine discovering a message from yourself—written years ago, when your dreams were different,
-            your fears unnamed, and your path uncertain. What would you tell that future version of you?
-            What hopes would you preserve? What moments would you seal in time?
+            Imagine discovering a message from yourself — written years ago, when your dreams
+            were different, your fears unnamed, and your path uncertain. What would you tell
+            that future version of you?
           </p>
+
+          <div className="hero-actions">
+            <Link to="/create" className="btn-primary" onClick={scrollTop}>
+              <span>✦</span>
+              <span>Create Your Capsule</span>
+            </Link>
+            <Link to="/how-it-works" className="btn-ghost" onClick={scrollTop}>
+              <span>See how it works</span>
+              <span className="btn-arrow">→</span>
+            </Link>
+          </div>
+        </div>
+
+        <div className="scroll-hint">
+          <span className="scroll-hint-text">Scroll</span>
+          <span className="scroll-hint-track" />
         </div>
       </section>
 
+      {/* ─── NARRATIVE ─── */}
       <section className="story-narrative">
-        <div className="narrative-content">
-          <div className="narrative-chapter">
-            <span className="chapter-number">I</span>
-            <h2 className="narrative-title">Preserve Your Story</h2>
-            <p className="narrative-text">
-              We live in a world of constant motion where moments slip through our fingers. What if you could capture who you are now—your hopes, dreams, and uncertainties—and send it to your future self?
-            </p>
+        <div className="narrative-section">
+
+          {/* Stats */}
+          <div className="stats-row">
+            {[
+              { n: '∞', l: 'Stories Preserved' },
+              { n: '100%', l: 'Private & Encrypted' },
+              { n: '0', l: 'Ads or Tracking' },
+              { n: 'Free', l: 'Forever' },
+            ].map(({ n, l }) => (
+              <div key={l} className="stat-cell">
+                <div className="stat-number">{n}</div>
+                <div className="stat-label">{l}</div>
+              </div>
+            ))}
           </div>
 
-          <div className="narrative-chapter">
-            <span className="chapter-number">II</span>
-            <h2 className="narrative-title">How It Works</h2>
-            <div className="story-features">
-              <div className="story-feature">
-                <span className="feature-label">Write</span>
-                <p className="feature-desc">Pour your heart into words for your future self</p>
+          {/* Chapter I */}
+          <div className="chapter-grid">
+            <div>
+              <div className="chapter-meta">
+                <span className="chapter-num">Chapter I</span>
+                <span className="chapter-divider" />
               </div>
-              <div className="story-feature">
-                <span className="feature-label">Preserve</span>
-                <p className="feature-desc">Add photos, videos, and memories</p>
-              </div>
-              <div className="story-feature">
-                <span className="feature-label">Seal</span>
-                <p className="feature-desc">Lock it away until you choose to open it</p>
-              </div>
-              <div className="story-feature">
-                <span className="feature-label">Receive</span>
-                <p className="feature-desc">Rediscover yourself when the time is right</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="narrative-chapter">
-            <span className="chapter-number">III</span>
-            <h2 className="narrative-title">Stories Worth Preserving</h2>
-            <div className="story-moments">
-              <div className="moment-card">
-                <div className="moment-icon">🎓</div>
-                <h3 className="moment-title">The Graduate</h3>
-                <p className="moment-story">
-                  "Today I walked across that stage. I hope you remember this feeling—the fear, the excitement, the endless possibility."
-                </p>
-              </div>
-              <div className="moment-card">
-                <div className="moment-icon">💍</div>
-                <h3 className="moment-title">The Promise</h3>
-                <p className="moment-story">
-                  "Our wedding day—pure, overwhelming joy. On our anniversary, let's read this together."
-                </p>
-              </div>
-              <div className="moment-card">
-                <div className="moment-icon">🌱</div>
-                <h3 className="moment-title">The Beginning</h3>
-                <p className="moment-story">
-                  "I'm starting something new today. I hope you're proud of what we built together—you and me, past and future."
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="narrative-chapter">
-            <div className="story-cta">
-              <Link to="/create" className="story-button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                Begin Your Story
-              </Link>
-              <p className="story-cta-note">
-                Create your first time capsule in moments
+              <h2 className="chapter-title">Preserve <em>What Matters</em></h2>
+              <p className="chapter-body">
+                We live in a world of constant motion where moments slip through our fingers.
+                TimeVault lets you capture who you are right now — your hopes, fears, and
+                certainties — and seal them safely until the right moment arrives.
               </p>
+              <Link to="/about" className="chapter-link" onClick={scrollTop}>
+                Our story <span>→</span>
+              </Link>
+            </div>
+            <div className="feature-mosaic">
+              {[
+                { icon: '✍️', title: 'Write', body: 'Pour your heart into words meant only for future eyes.', cls: '' },
+                { icon: '🖼️', title: 'Preserve', body: 'Attach photos, videos, and audio memories.', cls: '' },
+                { icon: '🔐', title: 'Seal', body: 'Lock it away until you choose to open it.', cls: '' },
+                { icon: '📬', title: 'Receive', body: 'Rediscover yourself at the perfect moment.', cls: '' },
+              ].map(({ icon, title, body, cls }) => (
+                <div key={title} className={`feature-tile${cls ? ' '+cls : ''}`}>
+                  <div className="tile-icon">{icon}</div>
+                  <div className="tile-title">{title}</div>
+                  <p className="tile-body">{body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Chapter II — moments */}
+          <div>
+            <div className="chapter-meta">
+              <span className="chapter-num">Chapter II</span>
+              <span className="chapter-divider" />
+            </div>
+            <h2 className="chapter-title">Stories Worth <em>Remembering</em></h2>
+            <div className="moments-strip">
+              {[
+                {
+                  emoji: '🎓',
+                  title: 'The Graduate',
+                  story: '"Today I walked across that stage. I hope you remember this feeling — the fear, the excitement, the endless possibility standing before you."',
+                },
+                {
+                  emoji: '💍',
+                  title: 'The Promise',
+                  story: '"Our wedding day was pure, overwhelming joy. On our anniversary, let\'s read this together and remember why we chose each other."',
+                },
+                {
+                  emoji: '🌱',
+                  title: 'The Beginning',
+                  story: '"I\'m starting something new today. I hope you\'re proud of what we built together — you and me, past and future, dreaming the same dream."',
+                },
+              ].map(({ emoji, title, story }) => (
+                <div key={title} className="moment-card">
+                  <span className="moment-emoji">{emoji}</span>
+                  <h3 className="moment-title">{title}</h3>
+                  <p className="moment-story">{story}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="story-epilogue">
-        <div className="epilogue-content">
-          <p className="epilogue-quote">
-            "Time is a gift, and what we do with it is our story to write."
-          </p>
-          <Link to="/about" className="epilogue-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            Learn more about our mission →
+      {/* ─── EPILOGUE ─── */}
+      <section className="epilogue">
+        <p className="epilogue-quote">
+          "Time is a gift, and what we do with it is our story to write."
+        </p>
+        <div className="epilogue-attr">
+          <span>Begin your chapter</span>
+        </div>
+        <div className="hero-actions">
+          <Link to="/create" className="btn-primary" onClick={scrollTop}>
+            <span>✦</span>
+            <span>Create Your First Capsule</span>
           </Link>
         </div>
       </section>
