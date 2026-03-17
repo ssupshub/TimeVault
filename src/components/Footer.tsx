@@ -1,48 +1,48 @@
 import { Link } from 'react-router-dom';
 
 function Footer() {
-  const currentYear = new Date().getFullYear();
-
-  const handleNavClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const year = new Date().getFullYear();
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <footer className="main-footer">
       <div className="footer-container">
-        <div className="footer-content">
-          <div className="footer-section footer-branding">
-            <div className="footer-logo">
-              <div className="logo-icon">⏳</div>
-              <span className="logo-text">TimeVault</span>
-            </div>
-            <p className="footer-tagline">
-              Preserve your memories, unlock your future
+        <div className="footer-top">
+          <div>
+            <div className="footer-brand-name">TimeVault</div>
+            <p className="footer-brand-desc">
+              Preserve your memories, thoughts, and dreams — and have them delivered
+              to your future self at the perfect moment.
             </p>
-            <p className="footer-description">
-              Questions or feedback? We'd love to hear from you.
-            </p>
-            <a href="mailto:subhamchauhan1310@gmail.com" className="footer-email">
-              Email Us!
+            <a href="mailto:subhamchauhan1310@gmail.com" className="footer-contact-link">
+              <span>✉</span>
+              <span>Get in touch</span>
             </a>
           </div>
 
-          <div className="footer-section footer-links-section">
-            <h4>Quick Links</h4>
+          <div>
+            <p className="footer-col-title">Navigation</p>
             <ul className="footer-links">
-              <li><Link to="/" onClick={handleNavClick}>Home</Link></li>
-              <li><Link to="/create" onClick={handleNavClick}>Create Capsule</Link></li>
-              <li><Link to="/how-it-works" onClick={handleNavClick}>How It Works</Link></li>
-              <li><Link to="/about" onClick={handleNavClick}>About Us</Link></li>
+              <li><Link to="/" onClick={scrollTop}>Home</Link></li>
+              <li><Link to="/create" onClick={scrollTop}>Create Capsule</Link></li>
+              <li><Link to="/how-it-works" onClick={scrollTop}>How It Works</Link></li>
+              <li><Link to="/about" onClick={scrollTop}>About</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="footer-col-title">Product</p>
+            <ul className="footer-links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Security</a></li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} TimeVault. All rights reserved.</p>
-          <p className="footer-note">
-            Built with care for your future self
-          </p>
+          <span>&copy; {year} TimeVault. All rights reserved.</span>
+          <span className="footer-motto">"Time is the canvas; memory, the paint."</span>
         </div>
       </div>
     </footer>
