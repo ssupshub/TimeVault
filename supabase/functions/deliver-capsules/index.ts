@@ -20,17 +20,13 @@ interface TimeCapsule {
 
 Deno.serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, {
-      status: 200,
-      headers: corsHeaders,
-    });
+    return new Response(null, { status: 200, headers: corsHeaders });
   }
 
   try {
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseKey);
-
     const now = new Date().toISOString();
 
     const { data: capsules, error: fetchError } = await supabase
@@ -39,9 +35,7 @@ Deno.serve(async (req: Request) => {
       .eq("is_delivered", false)
       .lte("unlock_date", now);
 
-    if (fetchError) {
-      throw fetchError;
-    }
+    if (fetchError) throw fetchError;
 
     const deliveryResults = [];
 
@@ -50,9 +44,7 @@ Deno.serve(async (req: Request) => {
         if (capsule.delivery_method === "email") {
           console.log(`EMAIL DELIVERY: Would send to ${capsule.delivery_target}`);
           console.log(`Message: ${capsule.message}`);
-          if (capsule.file_url) {
-            console.log(`File: ${capsule.file_url}`);
-          }
+          if (capsule.file_url) console.log(`File: ${capsule.file_url}`);
         } else if (capsule.delivery_method === "sms") {
           console.log(`SMS DELIVERY: Would send to ${capsule.delivery_target}`);
           console.log(`Message: ${capsule.message}`);
@@ -60,15 +52,10 @@ Deno.serve(async (req: Request) => {
 
         const { error: updateError } = await supabase
           .from("time_capsules")
-          .update({
-            is_delivered: true,
-            delivered_at: new Date().toISOString(),
-          })
+          .update({ is_delivered: true, delivered_at: new Date().toISOString() })
           .eq("id", capsule.id);
 
-        if (updateError) {
-          throw updateError;
-        }
+        if (updateError) throw updateError;
 
         deliveryResults.push({
           id: capsule.id,
@@ -86,31 +73,13 @@ Deno.serve(async (req: Request) => {
     }
 
     return new Response(
-      JSON.stringify({
-        success: true,
-        processed: deliveryResults.length,
-        results: deliveryResults,
-      }),
-      {
-        headers: {
-          ...corsHeaders,
-          "Content-Type": "application/json",
-        },
-      }
+      JSON.stringify({ success: true, processed: deliveryResults.length, results: deliveryResults }),
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error) {
     return new Response(
-      JSON.stringify({
-        success: false,
-        error: error instanceof Error ? error.message : "Unknown error",
-      }),
-      {
-        status: 500,
-        headers: {
-          ...corsHeaders,
-          "Content-Type": "application/json",
-        },
-      }
+      JSON.stringify({ success: false, error: error instanceof Error ? error.message : "Unknown error" }),
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
 });
