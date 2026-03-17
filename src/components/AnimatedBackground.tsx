@@ -8,7 +8,6 @@ const AnimatedBackground = () => {
     if (!el) return;
 
     const handleScroll = () => {
-      const sy = window.scrollY * 0.0002;
       el.style.transform = `translateY(${window.scrollY * 0.04}px)`;
     };
 
